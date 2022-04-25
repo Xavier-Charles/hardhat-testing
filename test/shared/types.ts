@@ -5,7 +5,9 @@ import { Lending } from "../../typechain";
 declare module "mocha" {
   export interface Context {
     loadFixture: <T>(fixture: Fixture<T>) => Promise<T>;
+    // eslint-disable-next-line no-use-before-define
     signers: Signers;
+    // eslint-disable-next-line no-use-before-define
     mocks: Mocks;
     lending: Lending;
   }
